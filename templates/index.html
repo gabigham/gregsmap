@@ -6,21 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-  <div class="container-fluid">
-    <div class="jumbotron text-center">
-      <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
-    </div>
+  <!-- div class="container-fluid" -->
+     <!-- The div where we will inject our map
     
-    <h2>Latest Mars News </h2>
-    <h4>{{ mission.article.news_title }}</h4>
-    <h5>{{ mission.article.news_p }} </h5> 
+      <div id="map"></div>
+    -->
+  
+        <div id="map"></div>   
+      
+
+  
+
+  <!-- 
   </div>
   
   <div class="row">
@@ -72,8 +84,15 @@
           </div>
       </div>
     </div>
+
+    -->
     
 
+
+    <!-- API key -->
+    <script type="text/javascript" src="config.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="logic.js"></script>
 
 </body>
 
