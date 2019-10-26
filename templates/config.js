@@ -1,5 +1,0 @@
-
-// MAP BOX API_KEY
-
-const API_KEY = "pk.eyJ1IjoiZ2FiaWdoYW00IiwiYSI6ImNrMjE4emFqMDA3dzczaG4wd2JnZ25wZzkifQ.zBg4aW61YgFF4-OB4drHQA";
-

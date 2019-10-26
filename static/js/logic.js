@@ -8,6 +8,8 @@ var myMap = L.map("map", {
     zoom: 13
   });
   
+console.log("my map logic")
+
   // Adding a tile layer (the background map image) to our map
   // We use the addTo method to add objects to our map
   L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {

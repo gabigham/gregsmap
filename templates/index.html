@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mission to Mars</title>
+  <title>Index from Templates</title>
 
   <!-- Leaflet CSS & JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -16,37 +16,35 @@
   crossorigin=""></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!--link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}"-->
+  
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 
 <body>
-  <!-- div class="container-fluid" -->
+ 
      <!-- The div where we will inject our map
+
+      <div id="map"></div> 
+     -->
     
-      <div id="map"></div>
-    -->
-  
-        <div id="map"></div>   
-      
-
-  
-
-  <!-- 
-  </div>
-  
+     <div id="map"></div> 
+ 
+  <!--
   <div class="row">
     <div class="col-md-8">
       <div class="jumbotron text-center" >
-        <h3>Featured Mars Image</h3>
-         <img src="{{ mission.featured_image }}" alt="featured image" height=100% width=100% >
+        <h3>{{ stuff.title }}</h3>
+        <h3>{{ stuff.age }}</h3> 
+        <h3>{{ stuff.location }}</h3> 
       </div>      
     </div>
     
     <div class="col-md-4">
         <div class="well">
             <h3>Latest Mars Weather</h3>
-            {{ mission.weather }}
+            
         </div>
         <div class="well">
             <img src="https://www.slashgear.com/wp-content/uploads/2018/11/Temperature-Mars-Facts.jpg" alt="fact image" height=100% width=100% >
@@ -57,14 +55,12 @@
   <div class="row">
     <div class="col-md-6">
       <div class="well">
-        <img src={{ mission.hemisphere_images[0].img_url }} alt="Cerebus" height=100% width=100%>
-        <h4> {{ mission.hemisphere_images[0].title }} Enhanced </h4>
+        
       </div>
     </div>
     <div class="col-md-6">
        <div class="well">
-          <img src={{ mission.hemisphere_images[1].img_url }} alt="Schiaparelli" height=100% width=100%>
-          <h4> {{ mission.hemisphere_images[1].title }} Enhanced </h4>
+       
         </div>
     </div>
   </div>  
@@ -73,26 +69,24 @@
     <div class="row">
       <div class="col-md-6">
           <div class="well">
-            <img src={{ mission.hemisphere_images[0].img_url }} alt="Syrtis Major" height=100% width=100%>
-            <h4> {{ mission.hemisphere_images[2].title }} Enhanced </h4>
+           
           </div>
       </div>
       <div class="col-md-6">
           <div class="well">
-            <img src={{ mission.hemisphere_images[1].img_url }} alt="Valles Marineris" height=100% width=100%>
-            <h4> {{ mission.hemisphere_images[3].title }} Enhanced </h4>
+
           </div>
       </div>
     </div>
 
     -->
-    
+
 
 
     <!-- API key -->
-    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="static/js/config.js"></script>
     <!-- JS -->
-    <script type="text/javascript" src="logic.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
 
 </body>
 
