@@ -24,13 +24,9 @@ def scrape():
     browser.click_link_by_partial_href('https://sacramento.craigslist.org')
     time.sleep(2)
 
-    # Using Splinter to scrape cl and store data in dict stuff (or pandas df)
+    # Using Splinter to scrape cl and store data in dataframe stuff (clean up condition)
 
-    #stuff = pd.DataFrame(columns=['title','age', 'location'])
-    stuff = {}
-    stuff["title"] = []
-    stuff["age"] = []
-    stuff["coord"] = [] 
+    stuff = pd.DataFrame(columns=['lat', 'long','age', 'title'])
 
     for x in range(1, 4):
         html = browser.html
@@ -39,17 +35,13 @@ def scrape():
         title = soup.find(id="titletextonly").text
         age = soup.find('time', class_="date timeago")["datetime"]
         loc = soup.find(id='map')
-        coord = [loc["data-latitude"], loc["data-longitude"]]
-        # condit = soup.find('p', class_="attrgroup")
-        # cond = ''
-        # if (condit and condit.b.text): cond = condit.b.text
+        lat = loc["data-latitude"]
+        long = loc["data-longitude"]
     
-        # stuff.loc[x] = [title, age, coord]
-        stuff["title"].append(title)
-        stuff["age"].append(age)
-        stuff["coord"].append(coord)
-
+        stuff.loc[x] = [lat, long, age, title]
         time.sleep(2)
         browser.click_link_by_partial_text('next')
 
     return stuff
+
+    
